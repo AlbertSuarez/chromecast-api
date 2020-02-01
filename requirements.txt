@@ -1,0 +1,8 @@
+connexion[swagger-ui]
+Flask
+Flask-Cors
+requests
+pychromecast
+protobuf
+zeroconf
+casttube
