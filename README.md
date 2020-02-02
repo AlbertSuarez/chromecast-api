@@ -12,6 +12,8 @@
 
 [API Endpoint](http://localhost:8321/) | [API Documentation](http://localhost:8321/docs) | [Swagger UI](http://localhost:8321/ui)
 
+![Animation](docs/animation.gif)
+
 ## Requirements
 
 1. Python 3.7+
