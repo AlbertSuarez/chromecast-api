@@ -14,9 +14,11 @@ def get(name=None):
     """
     try:
         for attempt in range(1, RETRIEVE_RETRY + 1):
+            log.info(f'Attempt [{attempt}]...')
             chromecast_list = pychromecast.get_chromecasts()
             chromecast_list = [Device(chromecast_item) for chromecast_item in chromecast_list]
             if name is not None:
+                log.info(f'Applying filter name by name: [{name}]')
                 chromecast_list = [device for device in chromecast_list if device.has_device_name(name)]
             chromecast_list = [device.serialize() for device in chromecast_list]
             if chromecast_list:
