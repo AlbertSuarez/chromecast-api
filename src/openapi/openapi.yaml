@@ -79,7 +79,7 @@ paths:
           in: query
           description: Source URL.
           required: true
-          example: https://asuarez.dev/chromecast-api/example/audio.mp3
+          example: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
           schema:
             type: string
       responses:
