@@ -4,12 +4,13 @@ class Device:
     """
 
     def __init__(self, chromecast_object):
-        self.uuid = str(chromecast_object.uuid)
-        self.cast_type = chromecast_object.cast_type
-        self.host = chromecast_object.host
-        self.model_name = chromecast_object.model_name
-        self.name = chromecast_object.name
-        self.media_controller = chromecast_object.media_controller
+        self.chromecast_object = chromecast_object
+        self.uuid = str(self.chromecast_object.uuid)
+        self.cast_type = self.chromecast_object.cast_type
+        self.host = self.chromecast_object.host
+        self.model_name = self.chromecast_object.model_name
+        self.name = self.chromecast_object.name
+        self.media_controller = self.chromecast_object.media_controller
 
     def has_device_name(self, device_name):
         """
