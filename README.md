@@ -1,6 +1,7 @@
 # Chromecast API
 
 [![HitCount](http://hits.dwyl.io/AlbertSuarez/chromecast-api.svg)](http://hits.dwyl.io/AlbertSuarez/chromecast-api)
+![Python application](https://github.com/AlbertSuarez/chromecast-api/workflows/Python%20application/badge.svg)
 [![GitHub stars](https://img.shields.io/github/stars/AlbertSuarez/chromecast-api.svg)](https://GitHub.com/AlbertSuarez/chromecast-api/stargazers/)
 [![GitHub forks](https://img.shields.io/github/forks/AlbertSuarez/chromecast-api.svg)](https://GitHub.com/AlbertSuarez/chromecast-api/network/)
 [![GitHub contributors](https://img.shields.io/github/contributors/AlbertSuarez/chromecast-api.svg)](https://GitHub.com/AlbertSuarez/chromecast-api/graphs/contributors/)
