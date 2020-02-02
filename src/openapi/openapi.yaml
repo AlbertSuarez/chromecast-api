@@ -60,6 +60,43 @@ paths:
                 type: string
                 description: Error description.
 
+  /play:
+    get:
+      tags:
+        - media
+      summary: API endpoint to play source into one of the available devices
+      description: Endpoint for an end-user client to play source into one of the available devices.
+      operationId: src.api.controllers.play.get
+      parameters:
+        - name: name
+          in: query
+          description: Friendly device name.
+          required: true
+          example: Living room
+          schema:
+            type: string
+        - name: source_url
+          in: query
+          description: Source URL.
+          required: true
+          example: https://asuarez.dev/chromecast-api/example/audio.mp3
+          schema:
+            type: string
+      responses:
+        200:
+          description: Standard Chromecast API JSON response. You should check the `error` attribute to determine if there was an error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APIResponse'
+        default:
+          description: Unexpected error.
+          content:
+            application/text:
+              schema:
+                type: string
+                description: Error description.
+
 components:
   schemas:
     APIResponse:
