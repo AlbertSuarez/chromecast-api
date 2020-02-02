@@ -1,0 +1,68 @@
+openapi: 3.0.1
+
+info:
+  title: Chromecast API
+  description: API for managing your Chromcast device(s) within your local network.
+  contact:
+    email: hi@asuarez.dev
+  version: "1.0"
+
+externalDocs:
+  description: GitHub repository
+  url: https://github.com/AlbertSuarez/chromecast-api
+
+servers:
+  - url: http://localhost:8321
+    description: Local network.
+
+tags:
+  - name: device
+    x-displayName: Device management
+  - name: media
+    x-displayName: Media management
+
+x-tagGroups:
+  - name: Device
+    tags:
+      - device
+  - name: Media
+    tags:
+      - media
+
+paths:
+  /devices:
+    get:
+      tags:
+        - device
+      summary: API endpoint to search devices within your local network
+      description: Endpoint for an end-user client to devices within your local network.
+      operationId: src.api.devices.get_all
+      responses:
+        200:
+          description: Standard Chromecast API JSON response. You should check the `error` attribute to determine if there was an error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/APIResponse'
+        default:
+          description: Unexpected error.
+          content:
+            application/text:
+              schema:
+                type: string
+                description: Error description.
+
+components:
+  schemas:
+    APIResponse:
+      type: object
+      properties:
+        error:
+          type: boolean
+          description: Whether or not the request was successfully processed or not.
+        message:
+          type: string
+          description: Error message if the request was unsuccessful.
+        response:
+          type: object
+          description: Contains the response data if the request was successful.
