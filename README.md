@@ -15,8 +15,6 @@
 ## Requirements
 
 1. Python 3.7+
-2. docker-ce (as provided by docker package repos)
-3. docker-compose (as provided by PyPI)
 
 ## Recommendations
 
@@ -34,10 +32,10 @@ To run the API, please execute the following commands from the root directory:
     pip3 install -r requirements.lock
     ```
 
-3. Run the server as a docker container with docker-compose
+3. Run the server as a uWSGI server with the given bash script
 
     ```bash
-    docker-compose up -d --build
+    ./run.sh
     ```
 
     or as a Python module
@@ -45,16 +43,6 @@ To run the API, please execute the following commands from the root directory:
     ```bash
     python3 -m src
     ```
-
-## Development
-
-### Logging
-
-For checking the logs of the whole stack in real time, the following command is recommend it:
-
-```bash
-docker-compose logs -f
-```
 
 ## Authors
 
