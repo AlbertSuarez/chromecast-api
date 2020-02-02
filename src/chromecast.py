@@ -16,8 +16,15 @@ connexion_app.add_api('openapi.yaml', arguments={'title': 'Chromecast API'})
 CORS(flask_app)
 
 
-@flask_app.route('/docs')
+@flask_app.route('/')
 def index():
+    response = Response('Welcome to Chromecast API!')
+    response.headers['Content-Type'] = 'text/plain'
+    return response, 200
+
+
+@flask_app.route('/docs')
+def docs():
     with open(DOCS_HTML_FILE_PATH, 'r') as html_file:
         html_content = str(html_file.read())
     response = Response(html_content)
