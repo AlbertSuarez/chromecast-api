@@ -36,7 +36,15 @@ paths:
         - device
       summary: API endpoint to search devices within your local network
       description: Endpoint for an end-user client to devices within your local network.
-      operationId: src.api.controllers.devices.get_all
+      operationId: src.api.controllers.devices.get
+      parameters:
+        - name: name
+          in: query
+          description: Friendly device name.
+          required: false
+          example: Living room
+          schema:
+            type: string
       responses:
         200:
           description: Standard Chromecast API JSON response. You should check the `error` attribute to determine if there was an error.

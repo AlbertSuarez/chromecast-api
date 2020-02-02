@@ -11,6 +11,14 @@ class Device:
         self.name = chromecast_object.name
         self.media_controller = chromecast_object.media_controller
 
+    def has_device_name(self, device_name):
+        """
+        Check if the device has a given device name.
+        :param device_name: Device name to check.
+        :return: True if has the same device name, False otherwise.
+        """
+        return bool(self.name.lower().strip() == device_name.lower().strip())
+
     def serialize(self):
         """
         Serialize a ORM object to a Python dictionary.
