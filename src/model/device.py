@@ -1,4 +1,7 @@
 class Device:
+    """
+    ORM representing a Chromecast device
+    """
 
     def __init__(self, chromecast_object):
         self.uuid = str(chromecast_object.uuid)
@@ -9,6 +12,10 @@ class Device:
         self.media_controller = chromecast_object.media_controller
 
     def serialize(self):
+        """
+        Serialize a ORM object to a Python dictionary.
+        :return: Python dictionary representation of the Chromecast device.
+        """
         return dict(
             uuid=self.uuid,
             cast_type=self.cast_type,
