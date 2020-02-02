@@ -1,6 +1,8 @@
 connexion==2.6.0
 Flask==1.1.1
 Flask-Cors==3.0.8
+uWSGI==2.0.18
+uwsgitop==0.11
 requests==2.22.0
 PyChromecast==4.1.1
 protobuf==3.11.2
