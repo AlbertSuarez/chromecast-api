@@ -1,6 +1,9 @@
 RETRIEVE_RETRY = 5
 RETRIEVE_RTD = 1.5
 
+PLAY_RANDOM = 'random'
+EXAMPLE_JSON_FILE_PATH = 'example/video.json'
+
 MIME_TYPES = {
     '.flv': 'video/x-flv',
     '.mp4': 'video/mp4',
