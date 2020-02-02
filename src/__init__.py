@@ -20,3 +20,5 @@ MESSAGE_PLAY_SUCCESS = 'Playing successfully.'
 MESSAGE_PLAY_DEVICE_NOT_FOUND = 'Device not found with the given name.'
 MESSAGE_PLAY_MIME_NOT_SUPPORTED = f'Source URL has to end in one of the following endings: {list(MIME_TYPES.keys())}'
 MESSAGE_PLAY_MIME_DEVICE_NOT_SUPPORTED = 'The given source is not compatible with the given device.'
+
+DOCS_HTML_FILE_PATH = 'src/templates/docs.html'
